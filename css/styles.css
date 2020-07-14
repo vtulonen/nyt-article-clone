@@ -107,9 +107,9 @@ body {
 												"editors-picks editors-picks popular";
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-	max-width: 1400px;
+	max-width: 1300px;
 	margin: 0 auto;
-	justify-items: center;
+	
 }
 
 .article {
@@ -147,8 +147,24 @@ body {
 	grid-template-rows: auto;
 	grid-gap: 20px;
 	align-content: baseline;
+	margin-left: 10px;
 }
 
-.popular > h2 {
+nav {
+	max-width: 1300px;
+	margin: 20px auto;
+}
 
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	text-align: center;
+	padding:  10px;
+}
+
+footer ul {
+	padding: 10px;
 }
