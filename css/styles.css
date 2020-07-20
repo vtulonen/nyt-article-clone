@@ -112,8 +112,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	max-width: 1200px;
-	margin: 0 auto;
 	align-items: center;
 }
 
@@ -155,6 +153,7 @@ header {
 	max-width: 600px;
 }
 
+
 /* Section 2 */
 
 .other-articles {
@@ -170,6 +169,7 @@ header {
 	max-width: 270px;
 	display: inline-block;
 }
+
 
 .article img {
 	max-width: 270px;
@@ -188,6 +188,12 @@ header {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
+	
+}
+
+section {
+	border-bottom: solid rgba(0,0,0, 0.2) 2px;
+	padding-bottom: 20px;
 }
 
 .more>h2, .editors-picks>h2 {
@@ -201,14 +207,31 @@ header {
 	grid-template-rows: auto;
 	grid-gap: 20px;
 	align-content: baseline;
-	margin-left: 10px;
+	margin-left: 20px;
+}
+
+.popular * {
+	padding-bottom: 22px;
+	border-bottom: solid rgba(0,0,0, 0.1) 1px;
 }
 
 /* Nav & footer */
 
 nav {
 	max-width: 1300px;
-	margin: 20px auto;
+	margin: 1px auto;
+	padding-top: 10px;
+	border-top: solid rgba(0,0,0, 0.1) 1px;
+}
+
+
+nav a {
+	padding: 10px 0;
+	border-bottom: solid rgba(0,0,0, 0.1) 1px;
+}
+
+nav > .flex-col :first-child {
+	border-top: solid rgba(0,0,0, 0.1) 1px;
 }
 
 .flex-col {
@@ -216,13 +239,22 @@ nav {
 	flex-direction: column;
 }
 
+.flex-row {
+	display: flex;
+	justify-content: space-between;
+}
+
 footer {
 	text-align: center;
 	padding: 10px;
 }
 
-footer ul {
+footer ul, footer ul > a {
 	padding: 10px;
+}
+
+footer a:hover {
+	text-decoration: underline;
 }
 
 /* Typography */
@@ -241,6 +273,10 @@ figcaption {
 	line-height: 1em;
 }
 
+h2 {
+	font-weight: bold;
+}
+
 figcaption>h2 {
 	font-weight: bold;
 	font-size: large;
@@ -252,10 +288,16 @@ figcaption>h2 {
 	font-size: .88em;
 }
 
+nav {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 .text-container {
 	font-size: 1.3em;
 	font-weight: 400;
 	line-height: 1.3em;
+	margin-bottom: 50px;
 }
 
 .text-container>p {
@@ -277,6 +319,41 @@ a:hover {
 	text-decoration: none;
 	cursor: pointer
 }
+
+.text-container > footer {
+	font-size: .7em;
+	line-height: normal;
+	text-align: start;
+}
+
+.text-container > footer div {
+	margin: 10px;
+}
+
+
+.other-articles > .more, .editors-picks, .popular {
+	border-top: solid rgba(0,0,0, 1) 1px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.other-articles a:hover {
+	color: #888;
+}
+.other-articles .credit {
+	text-align: end;
+	margin-bottom: 5px;
+	font-size: small;
+}
+
+.other-articles a {
+	font-size: 1.2em;
+}
+.date {
+	color: #888;
+	font-size: small;
+	margin-top: 5px;
+}
+
 
 /* buttons */
 
@@ -309,6 +386,10 @@ a:hover {
 	border: 1px solid rgb(50, 104, 145);
 	color: rgb(255, 255, 255);
 	font-weight: 700;
+}
+
+.btn__comment {
+	width: 50%;
 }
 
 
